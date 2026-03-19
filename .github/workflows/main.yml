@@ -1,0 +1,23 @@
+name: DevOps Pipeline
+
+on:
+  push:
+    branches:
+      - staging
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Build Stage
+        run: echo "Building application"
+
+      - name: Test Stage
+        run: echo "Running tests"
+
+      - name: Deploy Stage
+        run: echo "Deploying application"
